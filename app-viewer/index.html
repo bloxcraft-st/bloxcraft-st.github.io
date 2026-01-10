@@ -62,9 +62,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     const viewerTitle = document.getElementById("viewerTitle");
     const closeViewer = document.getElementById("closeViewer");
     const openNewTab = document.getElementById("openNewTab");
+    const gamesPrefix = "/gamesFiles/"
 
     if (gameUrl && gameUrl.startsWith("/")) {
-      viewerFrame.src = gameUrl;
+      viewerFrame.src = gamesPrefix + gameUrl.replace(/^\/+/, ""); // [NULL]: Added for better game file organization
 
    if (gameUrl === "/404") {
         viewerTitle.textContent = "404";
