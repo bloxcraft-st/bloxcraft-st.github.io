@@ -212,6 +212,8 @@ body {
   top: 0; 
   left: 0; 
   right: 0; 
+
+  z-index: 1000;
 }
 
 .navbar a {
@@ -396,5 +398,32 @@ body {
     display: block;
     box-sizing: border-box;
   }
+
+#searchBox {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 20px;
+  font-size: 16px;
+  border: 2px solid #00bfff;
+  border-radius: 12px;
+  background-color: rgba(30, 38, 51, 0.8);
+  color: white;
+  outline: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.3);
+  margin: 20px auto;
+  display: block;
+}
+
+#searchBox::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+}
+
+#searchBox:focus {
+  border-color: #00ffff;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6);
+  background-color: rgba(30, 38, 51, 1);
+}
 
 
